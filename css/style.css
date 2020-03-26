@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --secondary: rgb(144, 39, 214);
+}
+
+
+/* UTILITY CLASSES */
+.scroll {
+    transition: 0.5s ease-in-out;
+    opacity: 0.5;
+    transform: scale(0.5) translateY(150px);
+}
+
+.set {
+    transition: 1s ease-in-out;
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+.active {
+    color: var(--secondary);
+    transition: 0.5s;
+}
+.open {
+    height: 100vh;
+    transition: 0.5s all;
+}
+
+
+.btn-open {
+    transform: rotate(180deg);
+    transition: 0.5s all;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    overflow-y: hidden;
+    background-color: #000;
+}
+
+
+aside {
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    background-color: #333;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+
+.toggleBtn {
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background-color: #ffff;
+    padding: 15px;
+    border-radius: 50%;
+    color: #000;
+    font-size: 1.3em;
+    width: 50px;
+    height: 50px;
+    transition: 0.5s all;
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+
+.toggleBtn > i {
+    display: block;
+}
+
+
+.profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--secondary);
+    cursor: pointer;
+}
+
+.profile:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+aside  button {
+    background-color: transparent;
+    border: 0;
+    font-size: 1.5em;
+    display: block;
+    color: #fff;
+    padding: 0;
+    margin: 25px auto;
+    outline: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+
+.name {
+    font-weight: bold;
+    color: #b8b3b3;
+    text-align: center;
+    margin-top: 6px;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media > a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.social-media > a:hover {
+    color: var(--secondary);
+}
+
+main > div {
+    position: relative;
+    height: 100vh;
+    width: 80%;
+    left: 20%;
+    color: #fff;
+    background-color: rgb(26, 25, 25);
+}
+
+main > .home {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+#word {
+    color: var(--secondary);
+    border-right: 1px solid #fff;
+    padding-right: 5px;
+}
+
+main > .home  h1 {
+    margin: 0;
+    font-size: 4.5em;
+}
+
+main > .home h2 {
+    margin: 0;
+    font-weight: 200;
+    color: rgb(170, 168, 168);
+}
+
+
+
+#about {
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+}
+
+#about h1 {
+    font-size: 5em;
+    margin: 0;
+}
+
+
+#portfolio {
+    padding: 50px 0;
+}
+
+
+.works {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-gap: 15px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.work-thub {
+    width: 250px;
+    height: 150px;
+}
+
+.work-btn > a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.work-btn > a:first-child {
+    background-color: var(--secondary);
+    color: #fff;
+}
+
+.work-btn > a:last-child {
+    background-color: #333;
+    color: #fff;
+}
+
+
+
+
+#contact  h1 {
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+
+#contact .input-field {
+    font-size: 1.1em;
+}
+
+#contact .input-field > input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    font-size: 1.1em;
+    padding: 5px;
+    margin-bottom: 15px;
+    margin-top: 2px;
+    font-family: inherit;
+}
+
+
+.half {
+    display: flex;
+}
+
+.half >div {
+    flex: 1;
+}
+
+.half > div:first-child {
+    margin-right: 30px;
+}
+
+.half:last-child {
+    width: 50%;
+}
+
+#message {
+    width: 100%;
+    resize: none;
+    height: 200px;
+    display: block;
+    padding: 10px;
+    font-family: inherit;
+    margin-top: 2px;
+    font-size: 1.1em;
+}
+
+.btn {
+    display: block;
+    background-color: var(--secondary);
+    border: 0;
+    color: #fff;
+    padding: 10px 30px;
+    margin: 15px auto;
+    font-size: 1.2em;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background-color: rgb(94, 19, 145);
+}
+
+#about p {
+    line-height: 1.5;
+    font-size: 1.2em;
+}
+
+
+#contact {
+    padding: 25px 100px;
+}
+
+
+
+
+
+
+
+
+
+@media(max-width: 1100px) {
+    aside {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        height: 0;
+        overflow: hidden;
+        background-color: rgba(51, 51, 51, 0.9);
+        transition: 0.5s all;
+    }
+
+    aside  button {
+        padding: 20px 0;
+    }
+
+    .profile {
+        display: none;
+    }
+
+    .name {
+        display: none;
+    }
+
+    main > div {
+        width: 100%;
+        left: 0%;
+        padding-left: 100px;
+        color: #fff;
+        background-color: rgb(26, 25, 25);
+    }
+    
+    .toggleBtn {
+        display: block;
+    }
+
+    #portfolio > h1 {
+        margin: 0;
+    }
+    
+    .works {
+        grid-template-columns: repeat(3, 200px);
+        grid-gap: 15px;
+        margin: auto;
+    }
+
+    .work-thub {
+        width: 200px;
+        height: 100px;
+    }
+ 
+}
+
+
+@media(max-width: 800px) {
+    main > .home {
+        display: flex;
+        align-items: center;
+    }
+    
+    #word {
+        color: var(--secondary);
+        border-right: 1px solid #fff;
+        padding-right: 5px;
+    }
+    main > .home  h1 {
+        font-size: 2.5em;
+    }
+    
+    main > .home h2 {
+        margin: 0;
+        font-size: 1.2em;
+        font-weight: 200;
+        color: rgb(170, 168, 168);
+    }
+
+    main > .home {
+        justify-content: center;
+        padding: 0;
+    }
+    
+    #about h1 {
+        font-size: 2em;
+        margin: 0;
+    }
+    
+    #about p {
+        line-height: 1.5;
+        font-size: 1em;
+    }
+    
+
+    
+    #portfolio > div {
+        grid-template-columns: repeat(2, 170px);
+        grid-gap: 10px;
+    }
+
+    .work-thub {
+        width: 170px;
+        height: 100px;
+    }
+
+    .work-btn > a {
+        padding: 5px 0;
+    }
+    
+    #contact {
+        padding: 25px 35px;
+    }
+    
+    
+    #contact  h1 {
+        font-size: 2.3em;
+        margin-bottom: 30px;
+    }
+    
+    #contact .input-field {
+        font-size: 1em;
+    }
+    
+    #contact .input-field > input {
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+    
+    
+    .half {
+        display: block;
+    }
+    
+    
+    
+    .half > div:first-child {
+        margin-right: 0;
+    }
+    
+    
+    #message {
+        height: 150px;
+        font-size: 1em;
+    }
+    
+    .btn {
+       width: 100%;
+        padding: 10px 30px;
+        font-size: 1em;
+    }    
+}
