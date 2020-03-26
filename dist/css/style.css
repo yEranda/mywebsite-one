@@ -143,6 +143,7 @@ main > div {
 main > .home {
     display: flex;
     align-items: center;
+    padding: 50px;
 }
 
 #word {
@@ -375,6 +376,10 @@ main > .home h2 {
         color: rgb(170, 168, 168);
     }
 
+    main > .home {
+        justify-content: center;
+        padding: 0;
+    }
     
     #about h1 {
         font-size: 2em;
